@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+/* <!-- --------------------------------------------------header-------------------------------------------------------- --> */
+
+
+.header {
+    background: #F5F5F5;
+    padding: 1px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+
+.header-images {
+    display: flex;
+    align-items: center;
+    cursor:pointer ;
+}
+
+.first-img {
+    width: 75px;
+    margin-right: 20px;
+}
+
+.second-img {
+    width: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    padding: 1px 14px;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 1px;
+    background-color: #000;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+
+/* <!-- --------------------------------------------------navbar-------------------------------------------------------- --> */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 280px;
+    background: #FFFFFF;
+    padding: 12px 10px;
+    
+}
+.navbar img{
+    width: 70px;
+}
+.navbar ul li{
+    display: inline-block;
+    padding: 12px 18px;
+    list-style: none;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+
+}
+
+.navabr-end {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between elements */
+    align-items: center; /* Align items vertically */
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search input[type="text"] {
+    background: #E5E5E5;
+    padding: 3px 20px 3px 8px; /* Adjust padding for input */
+    border-radius: 20px; /* Round corners */
+    border: 1px solid #ccc; /* Add border */
+    font-size: 16px;
+}
+
+.search input[type="text"]:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.search i {
+    position: absolute;
+    right: 10px;
+    color: #999; /* Adjust color of the icon */
+}
+
+.social-icon i {
+    margin-left: 10px; /* Add space between social icons */
+}
+.social-icon i:hover{
+    padding: 8px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+
+/* ----------------------------------------------------------video-------------------------------------------------------- */
+.video {
+    width: 100%;
+    max-width: 130%; /* Ensures the video doesn't overflow its container */
+    margin: 0 auto; /* Centers the video horizontally */
+    overflow: hidden; /* Hides any overflowing content */
+    height: 80vh;
+}
+
+.video video {
+    width: 100%;
+    /* margin: auto; */
+    height: auto;/* Ensures the video maintains its aspect ratio*/
+    display: block; /* Removes any default inline display */
+}
+
+.video video:focus {
+    outline: none; /* Removes focus outline */
+}
+
+
+
+
+
+/* <!-- --------------------------------------------------Home-------------------------------------------------------- --> */
+
+
+.home{
+    width: 55%;
+    margin: 4% auto;
+    text-align: center;
+
+}
+.home h1{
+    font-size: 70px;
+}
+.home p{
+    font-size: 16px;
+}
+.btn{
+    padding: 5px 14px;
+    background: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    margin-top: 12px;
+    border-radius: 17px;
+}
+
+
+
+/* <!-- --------------------------------------------------Home Images-------------------------------------------------------- --> */
+
+
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Set the gap between grid items */
+    /* position: relative; */
+}
+
+.items {
+    position: relative; /* Position relative for absolute positioning */
+    
+}
+
+.items img {
+    width: 100%; /* Ensure images fill their container */
+    height: auto; /* Allow the height to adjust proportionally */
+    object-fit: cover; /* Maintain aspect ratio while covering */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+.items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px; /* Add rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.items:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.items img:hover {
+    opacity: 0.7; /* Reduce opacity of image on hover */
+}
+.content{
+    position: absolute;
+    bottom: 45px;
+    left: 32px;
+
+}
+.content p{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+} 
+.content h2{
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+.btn1{
+    padding: 6px 15px; 
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: 12px;
+    border: none;
+}
+
+/* <!-- ---------------------------------------------------Content-2------------------------------------------------------------------ --> */
+
+.cotent-2{
+    width: 55%;
+    margin: 4% auto;
+    text-align: center;
+
+}
+.cotent-2 h1{
+    font-size: 35px;
+}
+
+.images-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap: 1px; /* Adds some space between the images */
+}
+
+.images-2 img {
+    width: 100%; /* Ensures images take up the full width of their grid cell */
+    height: auto; /* Maintains the aspect ratio of the images */
+}
+
+
+/* <!-- ------------------------------------------------About-------------------------------------------------------------------------- --> */
+
+
+.about {
+    text-align: center;
+    margin-top: 50px;
+}
+.about h1{
+    font-size: 45px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.images3-container {
+    overflow: hidden; /* Hide overflow to implement pagination */
+    position: relative;
+    max-width: 100%; /* Ensure the container fits the available width */
+}
+
+.images3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Adjust the total number of images here */
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.images3 img {
+    width: 100%;
+    height: auto;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.arrow {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 2rem;
+}
+
+.arrow.left {
+    margin-right: 20px;
+}
+
+.arrow.right {
+    margin-left: 20px;
+}
+
+
+
+
+
+
+.images44 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.images4 {
+    position: relative;
+}
+
+.images4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+
+/* <!-- ---------------------------------------------------------Table------------------------------------------------------------ --> */
+
+
+
+.table{
+    width: 60%;
+    margin: 5% auto;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .table table td{
+    font-weight: 550;
+    color: #555;
+  }
+  .table table th{
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .table table td, th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 10px 20px;
+  }
+  .table-2{
+    display: flex;
+    margin-top: 50px;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .table-2 table td, th{
+    text-align: left;
+    padding: 6px 20px;
+  }
+  .table-2 table td{
+    font-weight: 550;
+    color: #555;
+  }
+  .table-2 table th{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .table-2 h1{
+    width: 250px;
+    color: #333;
+    font-size: 26px;
+    font-weight: 400;
+  }
+
+  /* <!-- ---------------------------------------------Footer------------------------------------------------------------------------- --> */
+
+  .footer{
+    margin-top: 12px;
+  }
+  .footer p{
+    text-align: center;
+    font-weight: 550;
+    color: #555;
+  }
+
+
+
+
+
+
+  @media (max-width: 1580px){
+    .header{
+        
+    }
+    .home{
+        width: 65%;
+        margin: 4% auto;
+        text-align: center;
+    
+    }
+    .home h1{
+        font-size: 50px;
+    }
+    .home p{
+        font-size: 16px;
+    }
+    .btn{
+        padding: 5px 14px;
+        background: black;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        margin-top: 12px;
+        border-radius: 17px;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 200px;
+        background: #FFFFFF;
+        padding: 12px 10px;
+        
+    }
+  }
+@media (max-width: 915px){
+  
+
+    .home{
+        width: 75%;
+        margin: 4% auto;
+        text-align: center;
+    
+    }
+    .home h1{
+        font-size: 40px;
+    }
+    .home p{
+        font-size: 16px;
+    }
+    .btn{
+        padding: 5px 14px;
+        background: black;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        margin-top: 12px;
+        border-radius: 17px;
+    }
+    .navbar{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        background: #FFFFFF;
+        padding: 12px 10px;
+        
+    }
+    
+}
+@media (max-width:780px){
+    .table{
+        width: 100%;
+        margin: 5% auto;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .table table td{
+        font-weight: 550;
+        color: #555;
+      }
+      .table table th{
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .table table td, th {
+        /* border: 1px solid #dddddd; */
+        text-align: left;
+        padding: 10px 18px;
+      }
+      .table-2{
+        display: block;
+        margin-top: 50px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        text-align: center;
+      }
+      .table-2 table td, th{
+        text-align: left;
+        padding: 6px 18px;
+      }
+      .table-2 table td{
+        font-size: 14px;
+        font-weight: 550;
+        color: #555;
+      }
+      .table-2 table th{
+        font-size: 17px;
+        font-weight: 400;
+      }
+      .table-2 h1{
+        margin-top: 20px;
+        text-align: center;
+        /* width: 250px; */
+        color: #333;
+        font-size: 26px;
+        font-weight: 400;
+      }
+      .content{
+        position: absolute;
+        bottom: 40px;
+        left: 30px;
+    
+    }
+    .content p{
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+    } 
+    .content h2{
+        font-size: 25px;
+        font-weight: 600;
+        color: #fff;
+    }
+    .btn1{
+        padding: 6px 15px; 
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+        background: #fff;
+        border-radius: 20px;
+        margin-top: 12px;
+        border: none;
+    }
+}
+@media (max-width: 650px){
+    .images {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Two columns */
+        gap: 10px; /* Set the gap between grid items */
+        /* position: relative; */
+    }
+    
+    .items {
+        position: relative; /* Position relative for absolute positioning */
+        
+    }  
+    .cotent-2{
+        width: 75%;
+        margin: 4% auto;
+        text-align: center;
+    
+    }
+    .cotent-2 h1{
+        font-size: 32px;
+    }
+    
+    .images-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Creates three equal columns */
+        row-gap:  30px; 
+    }
+    .images44 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .images4 {
+        position: relative;
+    }
+}
+
